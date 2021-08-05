@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample</title>
+</head>
+<body>
+
+    <h1>welcome to sample page</h1>
+    {%if res%}
+    <table border="2" >
+        <th> eno</th><th> ename</th><th> esal</th><th> eaddr</th>
+        {%for i in res%}
+        <tr>
+            <td>{{i.eno}}</td><td>{{i.ename}}</td><td>{{i.esal}}</td><td>{{i.eaddr}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <h3>no records</h3>
+    {%endif%}
+    
+</body>
+</html>
